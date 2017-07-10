@@ -20,7 +20,7 @@ CTFd is a Capture The Flag in a can. It's easy to customize with plugins and the
 https://demo.ctfd.io/
 
 ## How to run
-(After install docker)
+(After install docker)  
 $ docker pull [kcrong/demon-ctf](https://hub.docker.com/r/kcrong/demon-ctf/)  
 ```bash
 $ docker stack deploy demon --compose-file=./docker-compose.yml
