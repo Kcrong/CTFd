@@ -1,8 +1,8 @@
-version: '2'
+version: '3'
 
 services:
   ctfd:
-    build: .
+    image: kcrong/demon-ctf
     restart: always
     ports:
       - "8000:8000"
@@ -13,6 +13,8 @@ services:
       - .data/CTFd/uploads:/opt/CTFd/CTFd/uploads
     depends_on:
       - db
+    deploy:
+      replicas: 3
 
   db:
     image: mariadb
@@ -23,3 +25,5 @@ services:
       - MYSQL_DATABASE=ctfd
     volumes:
       - .data/mysql:/var/lib/mysql
+    deploy:
+      replicas: 1
