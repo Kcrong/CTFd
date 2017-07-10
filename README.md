@@ -19,6 +19,16 @@ CTFd is a Capture The Flag in a can. It's easy to customize with plugins and the
 ## Live Demo
 https://demo.ctfd.io/
 
+## How to run
+(After install docker)
+```bash
+$ docker pull [kcrong/demon-ctf](https://hub.docker.com/r/kcrong/demon-ctf/)  
+$ docker stack deploy demon --compose-file=./docker-compose.yml
+```
+```bash
+$ docker stack rm demon
+```
+
 ## Reverse Engineering Module
 https://reversing.ctfd.io/
 
